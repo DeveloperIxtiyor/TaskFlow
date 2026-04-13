@@ -19,9 +19,18 @@ const SKIP_NGROK: Record<string, string> = {
   'ngrok-skip-browser-warning': 'true',
 }
 
-// async function loadUser(): Promise<void> {
-//   const res = await fetch(`${API}/user`/me, {headers: authHeader()})
-// }
+async function loadUser(): Promise<void> {
+  const res = await fetch(`${API}/user/me`, {headers: authHeader() });
+  const user = await res.json();
+
+  if (!user.username) {
+    localStorage.removeItem('token');
+    window.location.href = './index.html';
+    return;
+  }
+
+  ;(document.getElementById('nav-username') as HTMLElement).textContent = user.username
+}
 
 function authHeader(): Record<string, string> {
   const token = getToken();
