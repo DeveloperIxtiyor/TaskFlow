@@ -20,13 +20,13 @@ const SKIP_NGROK: Record<string, string> = {
 }
 
 async function loadUser(): Promise<void> {
-  const res = await fetch(`${API}/user/me`, {headers: authHeader() });
-  const user = await res.json();
+  const res = await fetch(`${API}/user/me`, {headers: authHeader() })
+  const user = await res.json()
 
   if (!user.username) {
-    localStorage.removeItem('token');
-    window.location.href = './index.html';
-    return;
+    localStorage.removeItem('token')
+    window.location.href = './index.html'
+    return
   }
 
   ;(document.getElementById('nav-username') as HTMLElement).textContent = user.username

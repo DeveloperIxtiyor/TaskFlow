@@ -1,25 +1,25 @@
-interface User {
+export interface User {
     id: number;
     username: string;
 }
 
-interface TokenResponse {
+export interface TokenResponse {
     access_token: string;
     token_type: string;
 }
 
-interface TaskCreate {
+export interface TaskCreate {
     title: string;
     description: string;
 }
 
-interface TaskUpdate {
+export interface TaskUpdate {
     title: string;
     description: string;
     completed: boolean;
 }
 
-interface Task {
+export interface Task {
     id: number;
     title: string;
     description: string;
