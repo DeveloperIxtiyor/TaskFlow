@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dars</title>
+    <link rel="icon" type="image/x-icon" href="./image/Monogram-IT-Logo-Design-by-Greenlines-Studios.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    
+    <div class="bg-white p-8 rounded-xl shadow-md w-96 h-auto">
+
+        <h1 class="text-2xl font-bold mb-6 text-center">Auth System</h1>
+
+        <input id="username" type="text" placeholder="username" class="w-full p-2 border rounded mb-3">
+
+        <input id="password" type="password" placeholder="password" class="w-full p-2 border rounded mb-4">
+
+        <div class="flex gap-2 mb-4">
+
+            <button onclick="register()" class="bg-green-500 text-white px-4 py-2 rounded w-full">
+                Register
+            </button>
+
+            <button onclick="login()" class="bg-green-500 text-white px-4 py-2 rounded w-full">
+                Login
+            </button>
+
+        </div>
+
+        <button onclick="getMe()" class="bg-blue-500 text-white px-4 py-2 rounded w-full mb-4">
+            Get User Info
+        </button>
+
+        
+        <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded w-full mb-4">
+            Logout
+        </button>
+
+        <a href="./task.html"
+            class="block text-center bg-purple-700 text-white py-2 rounded w-full mb-4">
+            Vazifalar sahifasiga o‘tish
+        </a>
+
+        <div id="result" class="text-sm text-gray-700"></div>
+
+    </div>
+
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
